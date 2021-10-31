@@ -13,12 +13,12 @@ namespace GildedRoseTests
         [Fact]
         public void ThirtyDays()
         {
-            var fakeoutput = new StringBuilder();
-            Console.SetOut(new StringWriter(fakeoutput));
+            var fakeOutput = new StringBuilder();
+            Console.SetOut(new StringWriter(fakeOutput));
             Console.SetIn(new StringReader("a\n"));
 
-            Program.Main(new string[] { });
-            var output = fakeoutput.ToString();
+            Program.Main();
+            var output = fakeOutput.ToString();
 
             var result = File.ReadAllText("expectedResult.txt");
             
